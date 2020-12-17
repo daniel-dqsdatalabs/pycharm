@@ -1,1 +1,2 @@
-# pycharm
+# PyCharm
+Configuration bits and templates 
