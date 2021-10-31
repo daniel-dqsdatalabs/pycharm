@@ -12,6 +12,7 @@ __date__ = '${DATE}-${TIME}'
 
 from os import path
 from environs import Env
+from logger import logger
 
 
 ENV_FILE = path.join(path.abspath(path.dirname(__file__)), '.env')
