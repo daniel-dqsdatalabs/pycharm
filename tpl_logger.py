@@ -35,3 +35,13 @@ file_handler.setFormatter(file_formatter)
 
 logger.addHandler(shell_handler)
 logger.addHandler(file_handler)
+
+# Log statements in your code:
+# - logger.debug('this is a debug statement')
+# - logger.info('this is a info statement')
+# - logger.warning('this is a warning statement')
+# - logger.critical('this is a critical statement')
+# - logger.error('this is a error statement')
+#
+# Logger also accpets modifiers for extra information in logs (traceback):
+# - logger.error("Error happened!", exc_info=True)
