@@ -13,6 +13,7 @@ __date__ = '${DATE}-${TIME}'
 from datetime import datetime
 from flask import Flask, make_response, url_for, request
 from cerberus import Validator
+from logger import logger
 import psycopg2
 import settings
 
