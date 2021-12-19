@@ -54,7 +54,15 @@ def read_item(item_id):
     }
 
 
-@app.get("/number/{item_id}")
+@app.options('/number/{item_id}')
+def options(item_id: int) -> dict:
+    """ Example function """
+    return {
+        'options': 'post'
+    }
+
+
+@app.post('/number/{item_id}')
 def read_int_item(item_id: int) -> dict:
     """ Example function """
     return {
