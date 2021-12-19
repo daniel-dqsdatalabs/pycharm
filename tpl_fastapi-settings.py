@@ -29,6 +29,10 @@ class Settings(BaseSettings):
     """ This is the generic loader that sets common attributes and variables """
     # Set this out according to your development phase
     ENV: str = ENVIR('ENV', 'development')
+
+    # App secret key for entropy purposes
+    API_KEY: str = ENVIR('API_KEY', 'NoSecretKeyDefined')
+
     # Database details
     DB_TYPE: str = ENVIR('DB_TYPE', 'postgres')
     DB_HOST: str = ENVIR('DB_HOST', None)
@@ -36,8 +40,7 @@ class Settings(BaseSettings):
     DB_USER: str = ENVIR('DB_USER', None)
     DB_PASS: str = ENVIR('DB_PASS', None)
     DB_DBASE: str = ENVIR('DB_DBASE', None)
-    # App secret key for entropy purposes
-    SECRET_KEY: str = ENVIR('SECRET_KEY', 'NoSecretKeyDefined')
+
 
 
 settings = Settings()
