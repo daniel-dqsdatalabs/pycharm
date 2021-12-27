@@ -23,13 +23,15 @@
 __author__ = '${USER}'
 __date__ = '${DATE}-${TIME}'
 
+from os import makedirs
 import logging
 
 logger = logging.getLogger(__name__)
 
 # the handler determines where the logs go: stdout/file
+makedirs('./logs', exist_ok=True)
 shell_handler = logging.StreamHandler()
-file_handler = logging.FileHandler("debug.log")
+file_handler = logging.FileHandler('logs/debug.log')
 
 logger.setLevel(logging.DEBUG)
 shell_handler.setLevel(logging.WARNING)
